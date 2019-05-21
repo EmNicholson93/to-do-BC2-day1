@@ -7,7 +7,7 @@ function template(todo) {
 
     return /*html*/`
     <li>
-        <input type="checkbox" ${checked}>learn templates
+        <input type="checkbox" ${checked}>${todo.task}
     </li>
     `;
 }
