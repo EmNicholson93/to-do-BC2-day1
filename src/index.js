@@ -4,9 +4,8 @@ import todos from '../data/todo-list.js';
 
 const todoList = document.getElementById('todo');
 
-todoList.forEach(todo => {
+todos.forEach(todo => {
     const html = template(todo);
     const dom = htmlToDOM(html);
-    todos.appendchild(dom);
-
+    todoList.appendChild(dom);
 });
