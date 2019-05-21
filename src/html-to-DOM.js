@@ -4,7 +4,6 @@ function htmlToDOM(html) {
     const content = template.content;
     const firstElementChild = content.firstElementChild;
     return firstElementChild;
-
 }
 
 export default htmlToDOM;
