@@ -1,22 +1,32 @@
+import template from '../src/todo-template.js';
 const test = QUnit.test;
 
-function template() {
-    return /*html*/`
-    <li>
-        <input type="checkbox" name="task">learn templates
-    </li>
-    `;
-}
-
-test('make template for todo data', assert => {
+test('make template for todo data, true', assert => {
     //arrange
     const todo = {
         task: 'learn templates',
         completed: true
-    }
+    };
     const expected = /*html*/`
     <li>
-        <input type="checkbox" name="task">learn templates
+        <input type="checkbox" checked>learn templates
+    </li>
+    `;
+    //act
+    const html = template(todo);
+    //assert
+    assert.htmlEqual(html, expected);
+});
+
+test('make template for todo data, false', assert => {
+    //arrange
+    const todo = {
+        task: 'learn templates',
+        completed: false
+    };
+    const expected = /*html*/`
+    <li>
+        <input type="checkbox" >learn templates
     </li>
     `;
     //act
