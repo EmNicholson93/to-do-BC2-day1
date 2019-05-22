@@ -1,1 +1,0 @@
-import htmlToDOM from '../src/html-to-DOM.js';
